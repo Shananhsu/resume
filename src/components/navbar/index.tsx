@@ -1,4 +1,7 @@
+//components
+import Mobile from "./Mobile"; //手機版
+
 const Navbar = () => {
-  return <p>Navbar</p>;
+  return <Mobile />;
 };
 export default Navbar;
