@@ -1,4 +1,5 @@
 Vite+React with TypeScript 建立的專案
+請使用 node 18.18.0 運行
 
 使用套件
 1.TailwindCss
