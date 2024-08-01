@@ -34,7 +34,10 @@ const DropDownMenu = ({ handleToggle }: handleToggleType) => {
             </NavLink>
           </div>
         ))}
-        <button className="w-full text-center py-4" onClick={handleToggle}>
+        <button
+          className="w-full text-center py-4 text-white"
+          onClick={handleToggle}
+        >
           close
         </button>
       </div>
