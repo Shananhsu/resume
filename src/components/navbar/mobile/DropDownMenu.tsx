@@ -2,7 +2,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 
 //導覽列資料
-import { menuData } from "./data";
+import { menuData } from "../data";
 
 //type
 interface handleToggleType {
