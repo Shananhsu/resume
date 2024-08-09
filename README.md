@@ -10,3 +10,6 @@ https://reactrouter.com/en/main
 
 3.ReactIcons
 https://react-icons.github.io/react-icons/
+
+4.多語系 i18next
+https://www.i18next.com/

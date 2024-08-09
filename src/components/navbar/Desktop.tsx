@@ -1,5 +1,11 @@
 //react router dom
-import { menuData } from "./data.ts";
+import { menuData } from "./menuData.ts";
+
+//i18n
+import { useTranslation } from "react-i18next";
+
+//hooks
+import useChangeLanguage from "../../hooks/useChangeLanguage.ts";
 
 //react icons
 import { IoEarthOutline, IoLocationOutline } from "react-icons/io5";
@@ -8,9 +14,13 @@ import { IoEarthOutline, IoLocationOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
 const Desktop = () => {
+  const { t } = useTranslation();
+
+  const { changeLanguage } = useChangeLanguage();
+
   return (
     <nav className="hidden lg:flex py-2 px-4 items-center">
-      <h1 className="w-2/12">Shananhsu</h1>
+      <h1 className="w-2/12">{t("navbar.shananhsu")}</h1>
       <div className="flex items-center justify-center w-8/12">
         {menuData.map((item) => (
           <NavLink
@@ -34,6 +44,18 @@ const Desktop = () => {
         ))}
       </div>
       <div className="w-2/12 flex justify-end">
+        <button
+          className="mx-4 hover:text-red-600"
+          onClick={() => changeLanguage("en")}
+        >
+          English
+        </button>
+        <button
+          className="mx-4 hover:text-red-600"
+          onClick={() => changeLanguage("zh")}
+        >
+          繁體中文
+        </button>
         <button className="hover:text-green-400">
           <IoEarthOutline />
         </button>

@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IoLocationOutline } from "react-icons/io5";
 
 //導覽列資料
-import { menuData } from "../data";
+import { menuData } from "../menuData";
 
 //type
 interface handleToggleType {
