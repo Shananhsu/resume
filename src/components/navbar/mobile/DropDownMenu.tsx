@@ -1,6 +1,9 @@
 //react router dom
 import { NavLink, useNavigate } from "react-router-dom";
 
+//i18n
+import { useTranslation } from "react-i18next";
+
 //react icons
 import { IoLocationOutline } from "react-icons/io5";
 
@@ -14,6 +17,8 @@ interface handleToggleType {
 
 const DropDownMenu = ({ handleToggle }: handleToggleType) => {
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   //切換頁面時關閉選單
   const handleLinkClick = (link: string) => {
@@ -41,7 +46,7 @@ const DropDownMenu = ({ handleToggle }: handleToggleType) => {
                       <IoLocationOutline className="text-green-500 animate-bounce" />
                     </span>
                   )}
-                  <p className="w-full text-center">{item.title}</p>
+                  <p className="w-full text-center">{t(item.title)}</p>
                 </div>
               </div>
             )}
@@ -51,7 +56,7 @@ const DropDownMenu = ({ handleToggle }: handleToggleType) => {
           className="w-full text-center py-4 text-white"
           onClick={handleToggle}
         >
-          close
+          {t("navbar.close")}
         </button>
       </div>
     </div>

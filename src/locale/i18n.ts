@@ -23,7 +23,7 @@ i18n
   .init({
     resources,
     fallbackLng: "zh",
-    debug: true,
+    debug: false, //true 時控制台會強制出現i18n的訊息
     interpolation: {
       escapeValue: false,
     },

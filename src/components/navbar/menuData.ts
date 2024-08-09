@@ -1,12 +1,12 @@
 export const menuData = [
   {
     id: 1,
-    title: "Home",
+    title: "navbar.home",
     link: "/",
   },
   {
     id: 2,
-    title: "AboutMe",
+    title: "navbar.aboutMe",
     link: "/aboutMe",
   },
 ];

@@ -13,6 +13,9 @@ import { IoEarthOutline, IoLocationOutline } from "react-icons/io5";
 //導覽列資料
 import { NavLink } from "react-router-dom";
 
+//語系選單資料
+import { languageData } from "./languageData.ts";
+
 const Desktop = () => {
   const { t } = useTranslation();
 
@@ -36,7 +39,7 @@ const Desktop = () => {
                   <IoLocationOutline className="text-2xl animate-bounce" />
                 )}
                 <p className={`w-full mx-2 ${!isActive && "hover:text-white"}`}>
-                  {item.title}
+                  {t(item.title)}
                 </p>
               </div>
             )}
@@ -44,18 +47,15 @@ const Desktop = () => {
         ))}
       </div>
       <div className="w-2/12 flex justify-end">
-        <button
-          className="mx-4 hover:text-red-600"
-          onClick={() => changeLanguage("en")}
-        >
-          English
-        </button>
-        <button
-          className="mx-4 hover:text-red-600"
-          onClick={() => changeLanguage("zh")}
-        >
-          繁體中文
-        </button>
+        {languageData.map((item) => (
+          <button
+            className="mx-4 hover:text-red-600"
+            onClick={() => changeLanguage(item.lang)}
+            key={item.id}
+          >
+            {item.title}
+          </button>
+        ))}
         <button className="hover:text-green-400">
           <IoEarthOutline />
         </button>
