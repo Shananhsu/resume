@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout"; //layout
 
 //頁面
-import Home from "./home"; //首頁
-import AboutMe from "./aboutMe"; //關於我
+import Home from "./pages/home"; //首頁
+import AboutMe from "./pages/aboutMe"; //關於我
 
 const router = createBrowserRouter([
   {

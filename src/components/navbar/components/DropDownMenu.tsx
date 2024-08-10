@@ -7,15 +7,10 @@ import { useTranslation } from "react-i18next";
 //react icons
 import { IoLocationOutline } from "react-icons/io5";
 
-//導覽列資料
-import { menuData } from "../menuData";
-
 //type
-interface handleToggleType {
-  handleToggle: () => void;
-}
+import { dropDownMenuProps } from "../type.ts";
 
-const DropDownMenu = ({ handleToggle }: handleToggleType) => {
+const DropDownMenu = ({ handleToggle, menuData }: dropDownMenuProps) => {
   const navigate = useNavigate();
 
   const { t } = useTranslation();
