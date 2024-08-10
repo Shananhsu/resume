@@ -10,6 +10,10 @@ interface languageData {
   lang: string;
 }
 
+interface handleToggle {
+  (): void;
+}
+
 interface changeLanguage {
   (lan: string): void;
 }
@@ -20,7 +24,18 @@ export interface desktopNavbarProps {
   changeLanguage: changeLanguage;
 }
 
+export interface mobileNavbarProps {
+  handlePageMenu: handleToggle;
+  handleLangMenu: handleToggle;
+}
+
 export interface dropDownMenuProps {
-  handleToggle: () => void;
+  handlePageMenu: handleToggle;
   menuData: menuData[];
+}
+
+export interface languageMenuProps {
+  languageData: languageData[];
+  handleLangMenu: handleToggle;
+  changeLanguage: changeLanguage;
 }

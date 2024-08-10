@@ -10,20 +10,20 @@ import { IoLocationOutline } from "react-icons/io5";
 //type
 import { dropDownMenuProps } from "../type.ts";
 
-const DropDownMenu = ({ handleToggle, menuData }: dropDownMenuProps) => {
+const DropDownMenu = ({ handlePageMenu, menuData }: dropDownMenuProps) => {
   const navigate = useNavigate();
 
   const { t } = useTranslation();
 
   //切換頁面時關閉選單
   const handleLinkClick = (link: string) => {
-    handleToggle();
+    handlePageMenu();
     navigate(link);
   };
 
   return (
     <div className="fixed w-full h-screen bg-mask bg-opacity-50 left-0 top-0 flex items-start">
-      <div className="w-10/12 bg-black mx-auto mt-12">
+      <div className="w-10/12 bg-black mx-auto mt-12 text-sm rounded-b-md">
         {menuData.map((item) => (
           <NavLink
             key={item.id}
@@ -49,7 +49,7 @@ const DropDownMenu = ({ handleToggle, menuData }: dropDownMenuProps) => {
         ))}
         <button
           className="w-full text-center py-4 text-white"
-          onClick={handleToggle}
+          onClick={handlePageMenu}
         >
           {t("navbar.close")}
         </button>

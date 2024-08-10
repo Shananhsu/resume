@@ -50,10 +50,10 @@ const DesktopNavbar = ({
         ))}
       </div>
       <div className="w-2/12 flex justify-end items-center">
-        <div className="flex items-center border px-2 py-1 rounded border-gray-400 text-gray-400 bg-neutral-800 hover:border-green-400 hover:text-green-400">
+        <div className="flex items-center border px-2 py-1 rounded border-gray-400 text-gray-400 bg-neutral-800 hover:border-green-400  hover:text-green-400 cursor-pointer">
           <IoEarthOutline />
           <select
-            className="bg-neutral-800 outline-none mx-2"
+            className="bg-neutral-800 outline-none mx-2 cursor-pointer"
             value={i18n.language}
             onChange={handleLanguageChange}
           >
