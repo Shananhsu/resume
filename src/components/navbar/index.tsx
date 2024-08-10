@@ -19,7 +19,7 @@ import { languageData } from "./data/languageData.ts";
 import MobileNavbar from "./components/MobileNavbar.tsx"; //手機導覽列
 import DropDownMenu from "./components/DropDownMenu.tsx"; //手機下拉選單
 import DesktopNavbar from "./components/DesktopNavbar.tsx"; //電腦導覽列
-import LanguageMenu from "./components/LanguageMenu.tsx";
+import LanguageMenu from "./components/LanguageMenu.tsx"; //語言選單
 
 const Navbar = () => {
   //i18n
