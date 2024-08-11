@@ -7,14 +7,11 @@ import { useTranslation } from "react-i18next";
 //react icons
 import { IoLocationOutline, IoEarthOutline } from "react-icons/io5";
 
-//types
-import { desktopNavbarProps } from "../type.ts";
+//靜態資料
+import { menuData } from "../data/menuData.ts"; //導覽列選項
+import { languageData } from "../data/languageData.ts"; //語言選項
 
-const DesktopNavbar = ({
-  menuData,
-  languageData,
-  changeLanguage,
-}: desktopNavbarProps) => {
+const DesktopNavbar = () => {
   //i18n
   const { t, i18n } = useTranslation();
 
@@ -22,7 +19,7 @@ const DesktopNavbar = ({
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const newLanguage = event.target.value;
-    changeLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (

@@ -8,12 +8,7 @@ import { useTranslation } from "react-i18next";
 import { IoHomeSharp } from "react-icons/io5";
 
 //hooks
-import useToggle from "../../hooks/useToggle.ts";
-import useChangeLanguage from "../../hooks/useChangeLanguage.ts";
-
-//導覽列資料
-import { menuData } from "./data/menuData.ts";
-import { languageData } from "./data/languageData.ts";
+import useToggle from "../../hooks/useToggle.ts"; //開關 hook
 
 //components
 import MobileNavbar from "./components/MobileNavbar.tsx"; //手機導覽列
@@ -28,7 +23,6 @@ const Navbar = () => {
   //調用 hook
   const { toggle: pageMenu, handleToggle: handlePageMenu } = useToggle();
   const { toggle: langMenu, handleToggle: handleLangMenu } = useToggle();
-  const { changeLanguage } = useChangeLanguage();
 
   return (
     <header className="bg-neutral-800 text-white">
@@ -43,21 +37,9 @@ const Navbar = () => {
           handlePageMenu={handlePageMenu}
           handleLangMenu={handleLangMenu}
         />
-        <DesktopNavbar
-          menuData={menuData}
-          languageData={languageData}
-          changeLanguage={changeLanguage}
-        />
-        {pageMenu && (
-          <DropDownMenu menuData={menuData} handlePageMenu={handlePageMenu} />
-        )}
-        {langMenu && (
-          <LanguageMenu
-            languageData={languageData}
-            handleLangMenu={handleLangMenu}
-            changeLanguage={changeLanguage}
-          />
-        )}
+        <DesktopNavbar />
+        {pageMenu && <DropDownMenu handlePageMenu={handlePageMenu} />}
+        {langMenu && <LanguageMenu handleLangMenu={handleLangMenu} />}
       </nav>
     </header>
   );

@@ -10,7 +10,10 @@ import { IoLocationOutline } from "react-icons/io5";
 //type
 import { dropDownMenuProps } from "../type.ts";
 
-const DropDownMenu = ({ handlePageMenu, menuData }: dropDownMenuProps) => {
+//靜態資料
+import { menuData } from "../data/menuData.ts"; //導覽列選項
+
+const DropDownMenu = ({ handlePageMenu }: dropDownMenuProps) => {
   const navigate = useNavigate();
 
   const { t } = useTranslation();

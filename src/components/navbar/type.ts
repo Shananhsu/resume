@@ -18,12 +18,6 @@ interface changeLanguage {
   (lan: string): void;
 }
 
-export interface desktopNavbarProps {
-  menuData: menuData[];
-  languageData: languageData[];
-  changeLanguage: changeLanguage;
-}
-
 export interface mobileNavbarProps {
   handlePageMenu: handleToggle;
   handleLangMenu: handleToggle;
@@ -31,11 +25,8 @@ export interface mobileNavbarProps {
 
 export interface dropDownMenuProps {
   handlePageMenu: handleToggle;
-  menuData: menuData[];
 }
 
 export interface languageMenuProps {
-  languageData: languageData[];
   handleLangMenu: handleToggle;
-  changeLanguage: changeLanguage;
 }
