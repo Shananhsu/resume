@@ -1,21 +1,5 @@
-interface menuData {
-  id: number;
-  title: string;
-  link: string;
-}
-
-interface languageData {
-  id: number;
-  title: string;
-  lang: string;
-}
-
 interface handleToggle {
   (): void;
-}
-
-interface changeLanguage {
-  (lan: string): void;
 }
 
 export interface mobileNavbarProps {
