@@ -10,7 +10,7 @@ import { languageData } from "../data/languageData.ts"; //語言選項
 const LanguageMenu = ({ handleLangMenu }: languageMenuProps) => {
   const { t, i18n } = useTranslation();
   return (
-    <div className="fixed w-full h-screen bg-mask bg-opacity-50 left-0 top-0 flex items-center justify-center">
+    <div className="fixed w-full h-screen bg-mask bg-opacity-50 left-0 top-0 flex items-center justify-center z-50">
       <div className="bg-black w-10/12 rounded-md text-center py-2 text-sm">
         <p className="my-1 text-green-400">{t("navbar.chooseLanguage")}</p>
         <div>
