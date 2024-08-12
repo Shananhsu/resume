@@ -13,3 +13,6 @@ https://react-icons.github.io/react-icons/
 
 4.多語系 i18next
 https://www.i18next.com/
+
+5.Recharts
+https://recharts.org/en-US/
